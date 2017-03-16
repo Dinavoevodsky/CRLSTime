@@ -556,7 +556,7 @@ var blackOrSilverText = "Black Day";
 function drawBSButton() {
   var periodIndex = getPeriodIndex();
   var periodLabel = schedule[periodIndex].label;
-  if (periodLabel !== "morning" || periodLabel !== "after" || !isWeekend() || !isHoliday()){
+  if (!(periodLabel == "morning" || periodLabel == "after" || isWeekend() || isHoliday())){
   drawSmallCircle(lowerRightX, lowerRightY, smRadius, '#DDD');
   if (isBlackDay() == true) {
     blackOrSilverText = "Black Day";
